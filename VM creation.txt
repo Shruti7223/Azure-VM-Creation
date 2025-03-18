@@ -1,0 +1,66 @@
+Step 1: Sign in to Azure
+Go to Azure Portal.
+Sign in with your Microsoft account.
+Step 2: Create a Virtual Machine
+Navigate to "Virtual Machines"
+
+In the left sidebar, click Virtual Machines.
+Click + Create → Azure Virtual Machine.
+Basic Settings
+
+Subscription: Choose your subscription.
+Resource Group: Click Create new and enter a name (e.g., MyResourceGroup).
+Virtual Machine Name: Enter a name (e.g., MyAzureVM).
+Region: Select a region (e.g., East US).
+Availability Options: Choose No infrastructure redundancy required (or pick an availability set if needed).
+Image: Choose the OS (e.g., Windows Server 2019 Datacenter or Ubuntu 20.04 LTS).
+Size: Click See all sizes and select a size (e.g., Standard_B2s for cost-efficiency).
+Administrator Account
+
+Username: Enter your admin username (e.g., azureadmin).
+Password: Enter a secure password (for Windows).
+SSH Public Key: If using Linux, add your SSH key.
+Inbound Port Rules
+
+Public Inbound Ports:
+For Windows: Select RDP (3389).
+For Linux: Select SSH (22).
+Click Next: Disks.
+
+Step 3: Configure Disks
+OS Disk Type: Choose Standard SSD (default) or Premium SSD (for better performance).
+Data Disks: (Optional) Add extra storage if needed.
+Click Next: Networking.
+Step 4: Configure Networking
+Virtual Network (VNet): Leave as default or create a new one.
+Subnet: Leave as default.
+Public IP: Choose Create new to access the VM remotely.
+Inbound Ports: Ensure RDP (3389) (Windows) or SSH (22) (Linux) is allowed.
+Click Next: Management.
+Step 5: Management & Monitoring
+Enable Boot Diagnostics: Recommended.
+Auto Shutdown: Enable to save costs (optional).
+Click Next: Advanced → Click Next: Tags.
+Step 6: Review & Deploy
+Click Review + Create.
+Wait for the validation to complete.
+Click Create.
+Wait a few minutes for the VM to deploy.
+Step 7: Connect to the VM
+For Windows (RDP)
+Go to Virtual Machines in Azure Portal.
+Click your VM → Click Connect → Select RDP.
+Download the .rdp file and open it.
+Enter your credentials and connect.
+
+
+Install and Start IIS on Windows VM
+Step 1: Install IIS
+Open PowerShell as Administrator.
+Run the following command:
+powershell
+Copy
+Edit
+Install-WindowsFeature -Name Web-Server -IncludeManagementTools
+This installs IIS (Web Server) on your VM.
+Wait for the installation to complete.
