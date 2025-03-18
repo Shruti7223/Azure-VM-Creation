@@ -66,3 +66,5 @@ This installs IIS (Web Server) on your VM.
 Wait for the installation to complete.
 
 Now run Public IP of your VM on browser
+
+
