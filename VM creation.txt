@@ -59,8 +59,10 @@ Step 1: Install IIS
 Open PowerShell as Administrator.
 Run the following command:
 powershell
-Copy
-Edit
+
 Install-WindowsFeature -Name Web-Server -IncludeManagementTools
+
 This installs IIS (Web Server) on your VM.
 Wait for the installation to complete.
+
+Now run Public IP of your VM on browser
